@@ -1,0 +1,55 @@
+/* css 선택자 (selector) */
+
+/* 
+
+3가지 
+
+태그 선택자
+id 선택자
+class 선택자
+*/
+
+/*
+  css 우선순위
+  범위가 넓게 적용될 수 있는게 낮아요
+  범위가 좁을수록 높다. 
+*/
+
+/*
+  id -> 유일한 값. 
+  class -> 
+*/
+
+div {
+  background-color: red;
+}
+
+.greenbox {
+  background-color :green;
+}
+
+.fontbig {
+  font-size: 40px;
+}
+
+#bluebox {
+  background-color: blue;
+}
+
+.box {
+  display: flex;
+}
+
+.a {
+  margin: 10px;
+  border: 2px solid black;
+  padding: 15px;
+  background-color: yellow;
+}
+
+.b {
+  background-color: skyblue;
+}
+
+
+
