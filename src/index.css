@@ -1,55 +1,57 @@
-/* css 선택자 (selector) */
-
-/* 
-
-3가지 
-
-태그 선택자
-id 선택자
-class 선택자
-*/
-
-/*
-  css 우선순위
-  범위가 넓게 적용될 수 있는게 낮아요
-  범위가 좁을수록 높다. 
-*/
-
-/*
-  id -> 유일한 값. 
-  class -> 
-*/
-
 div {
+  display: inline;
+}
+
+header {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+span {
+  display: block;
+}
+
+.red {
   background-color: red;
 }
 
-.greenbox {
-  background-color :green;
-}
-
-.fontbig {
-  font-size: 40px;
-}
-
-#bluebox {
+.blue {
   background-color: blue;
 }
 
-.box {
+.green {
+  background-color: green;
+}
+
+.contents-wrapper {
   display: flex;
+  justify-content: space-between;
+  height: 500px;
 }
 
-.a {
-  margin: 10px;
-  border: 2px solid black;
-  padding: 15px;
-  background-color: yellow;
+.contents {
+  width: 100%;
 }
 
-.b {
-  background-color: skyblue;
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background-color: rgba(0,0,0,0.2);
+  width: 100%;
+  height: 100%;
 }
 
-
-
+.modal-contents {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  background-color: white;
+}
