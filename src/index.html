@@ -12,6 +12,7 @@
 <body>
 
   <div class="contents-wrapper">
+    <img src="./images/logo.svg" />
     <div class="contents red">A block</div>
     <div class="contents green b-block">
       B block
@@ -22,27 +23,19 @@
       </div>
     </div>
     <div class="contents blue">C block
-      <button onclick="openModal()">Open Modal</button>
+      <button class="open">Open Modal</button>
     </div>
   </div>
-  <footer>
-    바닥입니다
-  </footer>
   <div class="modal">
     <div class="modal-contents">
       <input placeholder="email"></input>
     </div>
   </div>
   <script type="text/javascript" src="index.js"></script>
-  <script type="text/javascript">
-    function openModal() {
-      console.log("open modal clicked");
-      var modal = document.querySelector('.modal');
-      modal.classList.add('active');
-    }
+
+  <script>
+
   </script>
-
-
 </body>
 
 </html>

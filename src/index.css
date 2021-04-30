@@ -123,9 +123,12 @@ span {
   align-items: center;
 }
 
-.active {
+.abc {
   display: flex;
 }
+
+
+
 
 .modal-contents {
   position: absolute;
