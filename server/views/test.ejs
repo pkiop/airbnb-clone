@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="http://localhost:3000/test">
+    <input name="date" placeholder="날짜를 입력하세요" type="date" />
+    <input name="personNumber" placeholder="인원 수" type="number" />
+    <select name="location">
+      <% locationList.forEach((el)=> { %>
+        <option>
+          <%- el %>
+        </option>
+        <% }) %>
+    </select>
+    <input type="submit" />
+  </form>
+  <div>
+    <% data.forEach((el)=> { %>
+      <div>
+        <%- '방 이름 : ' + el.roomName %>
+      </div>
+      <div>
+        <%- '최대 인원 수 :' + el.maxPerson %>
+      </div>
+      <% }) %>
+        <div>
+</body>
+
+</html>

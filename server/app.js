@@ -3,13 +3,17 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+// const { connect: dbConnect } = require('./models');
+// // const { listRooms } = require('./service/room');
+
+// dbConnect();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('index.html');
+  res.render('index.ejs');
 })
 
 const roomList = [
@@ -30,9 +34,44 @@ const roomList = [
   }
 ]
 
-app.get('/search', (req, res) => {
-  res.render('search.ejs', {result: 'result', roomList: roomList});
-})
+// 클라이언트
+// req : 
+// res : 
+app.get('/test', (req, res) => {
+  console.log("req : ", req.query);
+  const data = [
+    {
+      roomName: 'A',
+      maxPerson: 4,
+    },
+    {
+      roomName: 'B',
+      maxPerson: 5,
+    },
+    {
+      roomName: 'C',
+      maxPerson: 6,
+    },
+    {
+      roomName: 'D',
+      maxPerson: 7,
+    },
+  ]
+
+  const locationList = ['서울', '인천', '경기도', '부산'];
+
+  const personNumber = Number(req.query.personNumber);
+  const filteredData = data.filter((el) => {
+    return el.maxPerson >= personNumber;
+  })
+  res.render('test.ejs', {data: filteredData, locationList});
+});
+
+// app.get('/search', async (req, res) => {
+//   const response = await listRooms();
+//   console.log("res : ", response);
+//   res.render('search.ejs', {result: 'result12345', roomList: roomList});
+// })
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
